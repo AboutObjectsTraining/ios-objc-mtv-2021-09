@@ -2,18 +2,15 @@
 // See LICENSE.txt for this project's licensing information.
 
 #import <Foundation/Foundation.h>
+#import "Dog.h"
 
-//struct CPerson {
-//    char *firstName;
-//    char *lastName;
-//    int age;
-//}
-
-@interface Person : NSObject {
+@interface Person : NSObject <NSCopying> {
     // Ivars
     NSString *_firstName;
     NSString *_lastName;
     NSInteger _age;
+    
+    Dog *_dog;
 }
 
 // Methods
@@ -39,5 +36,8 @@
 
 - (NSInteger)age;
 - (void)setAge:(NSInteger)newValue;
+
+- (Dog *)dog;
+- (void)setDog:(Dog *)newValue;
 
 @end

@@ -43,4 +43,53 @@
     NSLog(@"Person is %@", person);
 }
 
+- (void)testMessagesToNil {
+    id foo = nil;
+    
+    NSString *desc = [foo description];
+    
+    NSLog(@"%@", desc);
+}
+
+- (void)testBarkBehavior {
+    id fred = [[Person alloc] initWithFirstName:@"Fred"
+                                              lastName:@"Smith"
+                                                   age:42];
+    Dog *rover = [[Dog alloc] init];
+    
+    [fred setDog:rover];
+    
+    if ([fred respondsToSelector:@selector(peep_bark)]) {
+        [fred bark];
+    }
+    
+    if ([fred respondsToSelector:@selector(lastObject)]) {
+        [fred lastObject];
+    }
+}
+
+- (void)testCopyingBehavior {
+    Person *fred = [[Person alloc] initWithFirstName:@"Fred"
+                                            lastName:@"Smith"
+                                                 age:42];
+    
+    Person *fredsClone = [fred copy];
+    
+    NSLog(@"%@", fredsClone);
+}
+
+// Key-Value Coding
+- (void)testKVC {
+    Person *fred = [[Person alloc] initWithFirstName:@"Fred"
+                                            lastName:@"Smith"
+                                                 age:42];
+    
+    
+    
+    NSLog(@"%@", [fred valueForKey:@"lastName"]);
+    
+    [fred setValue:@"Smythe" forKey:@"lastName"];
+    NSLog(@"%@", [fred lastName]);
+}
+
 @end

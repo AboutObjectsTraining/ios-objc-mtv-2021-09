@@ -3,6 +3,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import <Peeps/Person.h>
-#import <Peeps/Dog.h>
-#import <Peeps/NSString+PEEPAdditions.h>
+@interface NSString (PEEPAdditions)
+
+- (void)peep_bark;
+
+@end

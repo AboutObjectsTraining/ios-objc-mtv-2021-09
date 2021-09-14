@@ -21,8 +21,8 @@
     self = [super init];
     if (self == nil) return nil;
     
-    _firstName = aFirstName;
-    _lastName = aLastName;
+    _firstName = [aFirstName copy];
+    _lastName = [aLastName copy];
     _age = anAge;
     
     return self;
@@ -35,18 +35,33 @@
     return [[self alloc] initWithFirstName:aFirstName lastName:aLastName age:anAge];
 }
 
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    if ([super respondsToSelector:aSelector]) {
+        return YES;
+    }
+    return [[self dog] respondsToSelector:aSelector];
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    if ([[self dog] respondsToSelector:aSelector]) {
+        return [self dog];
+    }
+    return nil;
+}
+
+
 - (NSString *)firstName {
     return _firstName;
 }
 - (void)setFirstName:(NSString *)newValue {
-    _firstName = newValue; // TODO: handle mutable value
+    _firstName = [newValue copy];
 }
 
 - (NSString *)lastName {
     return _lastName;
 }
 - (void)setLastName:(NSString *)newValue {
-    _lastName = newValue;
+    _lastName = [newValue copy];
 }
 
 - (NSInteger)age {
@@ -63,9 +78,24 @@
     return [NSString stringWithFormat:@"%@ %@", fName, lName];
 }
 
+- (Dog *)dog {
+    return _dog;
+}
+- (void)setDog:(Dog *)newValue {
+    _dog = newValue;
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"%@, age is %@", [self fullName], @([self age])];
+}
+
+- (nonnull id)copyWithZone:(nullable NSZone *)zone {
+    Person *person = [[Person allocWithZone:zone] init];
+    person->_firstName = [[self firstName] copy];
+    person->_lastName = [[self lastName] copy];
+    person->_age = [self age];
+    return person;
 }
 
 @end
