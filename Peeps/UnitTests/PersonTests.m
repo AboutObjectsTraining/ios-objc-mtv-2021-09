@@ -15,9 +15,13 @@
     // Wrong!
     //    [person init];
     
-    [person setFirstName:@"Fred"];
-    [person setLastName:@"Smith"];
-    [person setAge:42];
+    person.firstName = @"Fred";
+    person.lastName = @"Smith";
+    person.age = 42;
+    
+//    [person setFirstName:@"Fred"];
+//    [person setLastName:@"Smith"];
+//    [person setAge:42];
 
     NSLog(@"Person is %@", person);
 }

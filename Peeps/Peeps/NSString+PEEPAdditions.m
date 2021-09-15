@@ -6,7 +6,7 @@
 @implementation NSString (PEEPAdditions)
 
 - (void)peep_bark {
-    printf("%s: Woof! Woof!\n", [self UTF8String]);
+    printf("%s: Woof! Woof!\n", self.UTF8String);
 }
 
 @end
