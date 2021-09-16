@@ -5,8 +5,8 @@
 #import "CLNCoolViewCell.h"
 
 @interface CLNCoolController () <UITextFieldDelegate>
-@property (strong, nonatomic) IBOutlet UIView *contentView;
-@property (strong, nonatomic) IBOutlet UITextField *textField;
+//@property (strong, nonatomic) IBOutlet UIView *contentView;
+//@property (strong, nonatomic) IBOutlet UITextField *textField;
 @end
 
 @implementation CLNCoolController
@@ -25,18 +25,18 @@
 //    subview2.backgroundColor = UIColor.systemOrangeColor;
 //}
 
-- (IBAction)addCell {
-    NSLog(@"In %s, text is %@", __func__, self.textField.text);
-    CLNCoolViewCell *newCell = [[CLNCoolViewCell alloc] init];
-    newCell.text = self.textField.text;
-    newCell.backgroundColor = UIColor.systemBlueColor;
-    [self.contentView addSubview:newCell];
-}
+//- (IBAction)addCell {
+//    NSLog(@"In %s, text is %@", __func__, self.textField.text);
+//    CLNCoolViewCell *newCell = [[CLNCoolViewCell alloc] init];
+//    newCell.text = self.textField.text;
+//    newCell.backgroundColor = UIColor.systemBlueColor;
+//    [self.contentView addSubview:newCell];
+//}
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    return YES;
-}
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+//    [textField resignFirstResponder];
+//    return YES;
+//}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"In %s", __func__);
