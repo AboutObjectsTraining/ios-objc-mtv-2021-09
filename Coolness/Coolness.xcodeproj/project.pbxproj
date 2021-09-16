@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B46DFCEF26F2975E00B11DA7 /* BlockLiteralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B46DFCEE26F2975E00B11DA7 /* BlockLiteralTests.m */; };
 		B4EF378026F1619700EC9241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF377F26F1619700EC9241 /* AppDelegate.m */; };
 		B4EF378326F1619700EC9241 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF378226F1619700EC9241 /* SceneDelegate.m */; };
 		B4EF378B26F1619B00EC9241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4EF378A26F1619B00EC9241 /* Assets.xcassets */; };
@@ -16,7 +17,20 @@
 		B4EF379C26F1796000EC9241 /* CLNCoolViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF379B26F1796000EC9241 /* CLNCoolViewCell.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B46DFCF126F2975E00B11DA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4EF377326F1619700EC9241 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4EF377A26F1619700EC9241;
+			remoteInfo = Coolness;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B46DFCEC26F2975E00B11DA7 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46DFCEE26F2975E00B11DA7 /* BlockLiteralTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockLiteralTests.m; sourceTree = "<group>"; };
+		B46DFCF026F2975E00B11DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4EF377B26F1619700EC9241 /* Coolness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coolness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4EF377E26F1619700EC9241 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4EF377F26F1619700EC9241 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B46DFCE926F2975E00B11DA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4EF377826F1619700EC9241 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,10 +64,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B46DFCED26F2975E00B11DA7 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				B46DFCEE26F2975E00B11DA7 /* BlockLiteralTests.m */,
+				B46DFCF026F2975E00B11DA7 /* Info.plist */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
 		B4EF377226F1619700EC9241 = {
 			isa = PBXGroup;
 			children = (
 				B4EF377D26F1619700EC9241 /* Coolness */,
+				B46DFCED26F2975E00B11DA7 /* UnitTests */,
 				B4EF377C26F1619700EC9241 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				B4EF377B26F1619700EC9241 /* Coolness.app */,
+				B46DFCEC26F2975E00B11DA7 /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +113,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B46DFCEB26F2975E00B11DA7 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B46DFCF526F2975E00B11DA7 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				B46DFCE826F2975E00B11DA7 /* Sources */,
+				B46DFCE926F2975E00B11DA7 /* Frameworks */,
+				B46DFCEA26F2975E00B11DA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B46DFCF226F2975E00B11DA7 /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = B46DFCEC26F2975E00B11DA7 /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B4EF377A26F1619700EC9241 /* Coolness */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4EF379426F1619B00EC9241 /* Build configuration list for PBXNativeTarget "Coolness" */;
@@ -106,6 +156,10 @@
 			attributes = {
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					B46DFCEB26F2975E00B11DA7 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = B4EF377A26F1619700EC9241;
+					};
 					B4EF377A26F1619700EC9241 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -125,11 +179,19 @@
 			projectRoot = "";
 			targets = (
 				B4EF377A26F1619700EC9241 /* Coolness */,
+				B46DFCEB26F2975E00B11DA7 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B46DFCEA26F2975E00B11DA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4EF377926F1619700EC9241 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +204,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B46DFCE826F2975E00B11DA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B46DFCEF26F2975E00B11DA7 /* BlockLiteralTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4EF377726F1619700EC9241 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,6 +226,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B46DFCF226F2975E00B11DA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4EF377A26F1619700EC9241 /* Coolness */;
+			targetProxy = B46DFCF126F2975E00B11DA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B4EF378C26F1619B00EC9241 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -168,6 +246,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B46DFCF326F2975E00B11DA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.training.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coolness.app/Coolness";
+			};
+			name = Debug;
+		};
+		B46DFCF426F2975E00B11DA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.training.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coolness.app/Coolness";
+			};
+			name = Release;
+		};
 		B4EF379226F1619B00EC9241 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -317,6 +431,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B46DFCF526F2975E00B11DA7 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B46DFCF326F2975E00B11DA7 /* Debug */,
+				B46DFCF426F2975E00B11DA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B4EF377626F1619700EC9241 /* Build configuration list for PBXProject "Coolness" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
