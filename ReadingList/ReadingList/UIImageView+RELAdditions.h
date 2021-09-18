@@ -3,11 +3,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class RLMBook;
+@interface UIImageView (RELAdditions)
 
-@interface RELViewBookController : UITableViewController
-
-@property (strong, nonatomic) RLMBook *book;
+@property (nonatomic) IBInspectable CGFloat cornerRadius;
 
 @end
-

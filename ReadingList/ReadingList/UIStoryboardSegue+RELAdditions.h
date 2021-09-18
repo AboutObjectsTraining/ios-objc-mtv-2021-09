@@ -3,11 +3,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class RLMBook;
+@interface UIStoryboardSegue (RELAdditions)
 
-@interface RELViewBookController : UITableViewController
-
-@property (strong, nonatomic) RLMBook *book;
+@property (readonly, nonatomic) id rel_destinationViewController;
 
 @end
 
